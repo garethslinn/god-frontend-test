@@ -30,7 +30,7 @@ export default function App() {
                       padding: 20,
                   }}
               >
-
+                <div className="productPanelContainer">
                   {carData &&
                   carData.map((item:CarData) => {
                       return (<>
@@ -39,10 +39,12 @@ export default function App() {
                               bodyType={item.bodyType}
                               modelName={item.modelName}
                               modelType={item.modelType}
+                              imageUrl={item.imageUrl}
                           />
                       </>)
                   })
                   }
+                </div>
               </View>
           </View>
 

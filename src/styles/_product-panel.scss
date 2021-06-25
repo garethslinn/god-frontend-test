@@ -1,15 +1,31 @@
+.productPanelContainer {
+    display: flex;
+    flex-wrap: wrap;
 
-.productPanel {
-  border: 2px solid red;
-  font-family: Volvo Novum, Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  width: 25%;
-  &__bodyType {
-    font-size: 16px;
-    text-transform: uppercase;
-    color: $secondary-foreground;
-    font-weight: 100;
-    margin: 0;
+  .productPanel {
+    border: 2px solid red;
+    font-family: Volvo Novum, Arial, sans-serif;
+
+    width: 23%;
+    box-sizing: border-box;
+
+    margin: 5px;
+    height: 500px;
+
+    &__bodyType {
+      font-size: 16px;
+      text-transform: uppercase;
+      color: $secondary-foreground;
+      font-weight: 100;
+      margin: 0;
+    }
+
+    &__modelName {
+      color: $primary-foreground;
+
+      span {
+        color: $secondary-foreground;
+      }
+    }
   }
 }
