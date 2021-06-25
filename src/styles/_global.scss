@@ -4,4 +4,7 @@
   max-width: $media-l;
   display: block;
   margin: 0 auto;
+  @media screen and (max-width: $media-m) {
+
+  }
 }
