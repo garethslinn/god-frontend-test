@@ -1,10 +1,16 @@
+
+.productPanelWrapper {
+  overflow: hidden;
+}
+
 .productPanelContainer {
   display: flex;
-  overflow: hidden;
+
   min-width: $media-xs;
+  position: relative;
+  height: 280px;
 
   .productPanel {
-    border: 2px solid red;
     font-family: Volvo Novum, Arial, sans-serif;
     width: 23%;
     min-width: 23%;
@@ -57,6 +63,7 @@
     }
 
     &__linkContainer {
+      margin-top: 20px;
       a:first-child {
         text-align: end;
         @media screen and (max-width: $media-m) {
@@ -80,6 +87,9 @@
         padding-left: 17px;
         overflow: hidden;
         display: inline-block;
+        .icon {
+         top: 1px;
+        }
 
         @media screen and (max-width: $media-tp) {
           text-align: start;

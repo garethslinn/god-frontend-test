@@ -20,7 +20,6 @@ const ProductPanel = ({id, bodyType, modelName, modelType, imageUrl}: ItemProps)
             </div>
         </div>
     );
-
 }
 
 export default ProductPanel;

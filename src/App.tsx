@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 // @ts-ignore
 import { Block, Button, View} from 'vcc-ui';
-import ProductPanel from "./components/ProductPanel";
+import ProductPanelContainer from "./components/ProductPanelContainer";
 
 interface CarData {
     id: string;
@@ -12,13 +12,6 @@ interface CarData {
 }
 
 export default function App() {
-    const [carData, setCarData] = useState<CarData[]>([]);
-    useEffect(() => {
-        fetch('api/cars.json')
-            .then(response => response.json())
-            .then(data => setCarData(data))
-        console.log('carData', carData)
-    }, []);
 
   return (
       <Block extend={{ padding: 20 }}>
@@ -30,21 +23,7 @@ export default function App() {
                       padding: 20,
                   }}
               >
-                <div className="productPanelContainer">
-                  {carData &&
-                  carData.map((item:CarData) => {
-                      return (<>
-                          <ProductPanel
-                              id={item.id}
-                              bodyType={item.bodyType}
-                              modelName={item.modelName}
-                              modelType={item.modelType}
-                              imageUrl={item.imageUrl}
-                          />
-                      </>)
-                  })
-                  }
-                </div>
+                <ProductPanelContainer />
               </View>
           </View>
       </Block>
