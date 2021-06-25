@@ -3,16 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Block, Button, View} from 'vcc-ui';
 import ProductPanelContainer from "./components/ProductPanelContainer";
 
-interface CarData {
-    id: string;
-    modelName: string;
-    bodyType: string;
-    modelType: string;
-    imageUrl: string;
-}
-
 export default function App() {
-
   return (
       <Block extend={{ padding: 20 }}>
           <View spacing={2}>
