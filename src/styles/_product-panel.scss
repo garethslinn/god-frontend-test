@@ -59,12 +59,11 @@
     &__linkContainer {
       a:first-child {
         text-align: end;
-        @media screen and (max-width: $media-t) {
-          text-align: start;
-          background: yellow;
-        }
         @media screen and (max-width: $media-m) {
-          text-align: end;
+          font-size: 14px;
+          .icon {
+            display: inline-block;
+          }
         }
       }
       a {
@@ -77,30 +76,26 @@
         text-decoration: none;
         font-size: 12px;
         width: 50%;
-        padding-left: 15px;
+        max-height: 15px;
+        padding-left: 17px;
+        overflow: hidden;
         display: inline-block;
-        border: 1px solid red;
-        @media screen and (max-width: $media-m) {
-          font-size: 14px;
-        }
+
         @media screen and (max-width: $media-tp) {
           text-align: start;
           padding: 0;
-          font-size: 10px;
-          background:green;
-          color: white;
           .icon {
             display: none;
           }
         }
-        @media screen and (max-width: $media-t) {
-          background: yellow;
-          .icon {
-            display: inline-block;
+        @media screen and (max-width: $media-m) {
+          font-size: 14px;
+          padding-left: 17px;
+            .icon {
+              display: inline-block;
+            }
           }
         }
-      }
-
     }
   }
 }
