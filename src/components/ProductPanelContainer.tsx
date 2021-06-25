@@ -36,6 +36,7 @@ export default function ProductPanelContainer() {
     const setCurrentWidth = () => {
         // @ts-ignore
         let currentWidth = ref.current ? ref.current.offsetWidth : 0;
+        setNavigation(0);
         setContainerWidth(currentWidth);
     }
 
