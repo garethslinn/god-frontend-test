@@ -47,8 +47,6 @@ export default function App() {
                 </div>
               </View>
           </View>
-
-        <Button>Click me!</Button>
       </Block>
   );
 }
