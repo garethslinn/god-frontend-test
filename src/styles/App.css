@@ -1,0 +1,25 @@
+/* colours */
+/* break points */
+.container {
+  font-family: Volvo Novum, Arial, sans-serif;
+  border: 2px solid red;
+  max-width: 1024px;
+  display: block;
+  margin: 0 auto; }
+
+.productPanel {
+  border: 2px solid red;
+  font-family: Volvo Novum, Arial, sans-serif;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+          justify-content: center;
+  width: 25%; }
+  .productPanel__bodyType {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #707070;
+    font-weight: 100;
+    margin: 0; }
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsWUFBWTtBQUNaLGlCQUFpQjtBQUNqQjtFQUNFLDJDQUEyQztFQUMzQyxxQkFBcUI7RUFDckIsaUJBQWlCO0VBQ2pCLGNBQWM7RUFDZCxjQUFjLEVBQUU7O0FBRWxCO0VBQ0UscUJBQXFCO0VBQ3JCLDJDQUEyQztFQUMzQyxxQkFBYTtFQUFiLGFBQWE7RUFDYiwrQkFBdUI7VUFBdkIsdUJBQXVCO0VBQ3ZCLFVBQVUsRUFBRTtFQUNaO0lBQ0UsZUFBZTtJQUNmLHlCQUF5QjtJQUN6QixjQUFjO0lBQ2QsZ0JBQWdCO0lBQ2hCLFNBQVMsRUFBRSIsImZpbGUiOiJhcHAuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyogY29sb3VycyAqL1xuLyogYnJlYWsgcG9pbnRzICovXG4uY29udGFpbmVyIHtcbiAgZm9udC1mYW1pbHk6IFZvbHZvIE5vdnVtLCBBcmlhbCwgc2Fucy1zZXJpZjtcbiAgYm9yZGVyOiAycHggc29saWQgcmVkO1xuICBtYXgtd2lkdGg6IDEwMjRweDtcbiAgZGlzcGxheTogYmxvY2s7XG4gIG1hcmdpbjogMCBhdXRvOyB9XG5cbi5wcm9kdWN0UGFuZWwge1xuICBib3JkZXI6IDJweCBzb2xpZCByZWQ7XG4gIGZvbnQtZmFtaWx5OiBWb2x2byBOb3Z1bSwgQXJpYWwsIHNhbnMtc2VyaWY7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICB3aWR0aDogMjUlOyB9XG4gIC5wcm9kdWN0UGFuZWxfX2JvZHlUeXBlIHtcbiAgICBmb250LXNpemU6IDE2cHg7XG4gICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbiAgICBjb2xvcjogIzcwNzA3MDtcbiAgICBmb250LXdlaWdodDogMTAwO1xuICAgIG1hcmdpbjogMDsgfVxuIl19 */
