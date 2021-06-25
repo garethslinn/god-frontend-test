@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 // @ts-ignore
 import { Block, Button, View} from 'vcc-ui';
 import ProductPanelContainer from "./components/ProductPanelContainer";

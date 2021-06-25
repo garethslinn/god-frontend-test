@@ -1,12 +1,5 @@
 import React, { ReactElement } from 'react';
-
-type ItemProps = {
-    id: string;
-    modelName: string;
-    bodyType: string;
-    modelType: string;
-    imageUrl: string;
-};
+import { ItemProps } from '../types/types';
 
 const ProductPanel = ({id, bodyType, modelName, modelType, imageUrl}: ItemProps): ReactElement => {
     return (

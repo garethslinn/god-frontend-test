@@ -2,17 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 // @ts-ignore
 import { Block, Button, View} from 'vcc-ui';
 import ProductPanel from "../components/ProductPanel";
-
-interface CarData {
-    id: string;
-    modelName: string;
-    bodyType: string;
-    modelType: string;
-    imageUrl: string;
-}
+import { ItemProps } from '../types/types';
 
 export default function ProductPanelContainer() {
-    const [carData, setCarData] = useState<CarData[]>([]);
+    const [carData, setCarData] = useState<ItemProps[]>([]);
     const [containerWidth, setContainerWidth] = useState();
     const [navigation, setNavigation] = useState(0);
     const [itemtotal, setItemTotal] = useState(8);
@@ -57,7 +50,7 @@ export default function ProductPanelContainer() {
         <div ref={ref} className="productPanelWrapper">
             <div style={positionStyle()} className="productPanelContainer">
               {carData &&
-              carData.map((item:CarData) => {
+              carData.map((item:ItemProps) => {
                   return (<>
                       <ProductPanel
                           id={item.id}
