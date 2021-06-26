@@ -82,7 +82,7 @@ export default function ProductPanelCarousel() {
     const filterCars = () => {
         if (filterValue !== '') {
             setIsFilter(true);
-            console.log('isFilter', isFilter)
+            setNavigation(0);
         }
 
         const filteredCars = carData.filter(item => item.bodyType === filterValue);
@@ -91,19 +91,22 @@ export default function ProductPanelCarousel() {
 
     const resetCars = () => {
         setCarData(savedData);
+        setNavigation(0);
         setIsFilter(false);
     }
 
   return (
       <Block>
+          <div className="filterPanel">
+              <label htmlFor="filter">Filter by body type</label>
+              <SelectInput id="filter" disabled={isFilter} value={filterValue} onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setFilterValue(e.target.value)}>
+                  <option value="suv">SUV</option>
+                  <option value="estate">ESTATE</option>
+                  <option value="sedan">SEDAN</option>
+              </SelectInput>
+              <Button intent="secondary" onClick={() => resetCars ()}>Reset</Button>
+          </div>
         <div ref={ref} className="productPanelWrapper">
-            <label htmlFor="filer">Filter by body type</label>
-            <SelectInput disabled={isFilter} value={filterValue} onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setFilterValue(e.target.value)}>
-                <option value="suv">SUV</option>
-                <option value="estate">ESTATE</option>
-                <option value="sedan">SEDAN</option>
-            </SelectInput>
-            <Button intent="secondary" onClick={() => resetCars ()}>Reset</Button>
             <Block>
                 <div style={positionStyle()} className="productPanelContainer">
                   {carData &&
