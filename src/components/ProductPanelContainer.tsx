@@ -3,18 +3,20 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Block, Button, View} from 'vcc-ui';
 import ProductPanel from "../components/ProductPanel";
 import { ItemProps } from '../types/types';
+import NavigationControl from "./NavigationControl";
 
 export default function ProductPanelContainer() {
     const [carData, setCarData] = useState<ItemProps[]>([]);
     const [containerWidth, setContainerWidth] = useState();
-    const [navigation, setNavigation] = useState(0);
+    const [navigation, setNavigation] = useState();
     const [itemtotal, setItemTotal] = useState(8);
     const desktopWidth = 1024;
     const mobileWidth = 481;
 
     const movePanel = (direction: number) => {
-        let navDirection = navigation - containerWidth;
-        setNavigation(navDirection);
+        // 0: backwards, 1: forwards
+        const panelDirection = direction ? (navigation - containerWidth) : (navigation + containerWidth)
+        setNavigation(panelDirection);
     }
 
     const ref = useRef(null);
@@ -46,26 +48,27 @@ export default function ProductPanelContainer() {
     }, [ref.current]);
 
   return (
-    <>
+      <Block>
         <div ref={ref} className="productPanelWrapper">
-            <div style={positionStyle()} className="productPanelContainer">
-              {carData &&
-              carData.map((item:ItemProps) => {
-                  return (<>
-                      <ProductPanel
-                          id={item.id}
-                          bodyType={item.bodyType}
-                          modelName={item.modelName}
-                          modelType={item.modelType}
-                          imageUrl={item.imageUrl}
-                      />
-                  </>)
-              })
-              }
-            </div>
+            <Block>
+                <div style={positionStyle()} className="productPanelContainer">
+                  {carData &&
+                  carData.map((item:ItemProps) => {
+                      return (<>
+                          <ProductPanel
+                              id={item.id}
+                              bodyType={item.bodyType}
+                              modelName={item.modelName}
+                              modelType={item.modelType}
+                              imageUrl={item.imageUrl}
+                          />
+                      </>)
+                  })
+                  }
+                </div>
+            </Block>
+            <NavigationControl fnc={movePanel} />
         </div>
-
-        <Button onClick={() => movePanel(1)}>Click me!</Button>
-    </>
+      </Block>
   );
 }

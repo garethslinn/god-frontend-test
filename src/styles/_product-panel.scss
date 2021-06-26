@@ -1,14 +1,15 @@
 
 .productPanelWrapper {
   overflow: hidden;
+  position: relative;
+  padding-bottom: 40px;
 }
 
 .productPanelContainer {
   display: flex;
-
+  transition: all 1s ease-in-out;
   min-width: $media-xs;
   position: relative;
-  height: 350px;
 
   .productPanel {
     font-family: Volvo Novum, Arial, sans-serif;
@@ -107,5 +108,17 @@
           }
         }
     }
+  }
+}
+
+.navigation-controls {
+  position: absolute;
+  right: 5px;
+  bottom: 3px;
+  button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    width: 38px;
   }
 }
