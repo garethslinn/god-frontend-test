@@ -23,7 +23,6 @@ export default function ProductPanelCarousel() {
         checkNavigation();
         // 0: backwards, 1: forwards
         const panelDirection = direction ? (navigation - containerWidth) : (navigation + containerWidth)
-        // totalGroups
         setNavigation(panelDirection);
     }
 
@@ -84,7 +83,6 @@ export default function ProductPanelCarousel() {
             setIsFilter(true);
             setNavigation(0);
         }
-
         const filteredCars = carData.filter(item => item.bodyType === filterValue);
         setCarData(filteredCars);
     }
@@ -125,7 +123,6 @@ export default function ProductPanelCarousel() {
                 </div>
             </Block>
             {!isFilter && <NavigationControl fnc={movePanel} forward={!isForward} backward={!isBackward} />}
-
         </div>
       </Block>
   );
