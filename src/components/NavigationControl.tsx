@@ -2,14 +2,9 @@ import React, { ReactElement } from 'react';
 
 // @ts-ignore
 import { Block } from 'vcc-ui';
+import { NavigationProps} from "../types/types";
 
-export type Props = {
-    fnc: (number: number) => void;
-    forward: boolean;
-    backward: boolean;
-};
-
-const NavigationControl = ({fnc, forward, backward}: Props): ReactElement => {
+const NavigationControl = ({fnc, forward, backward}: NavigationProps): ReactElement => {
     return (
         <div className="navigation-controls">
             <button title={backward ? `button disabled` : `move backward`} disabled={backward} onClick={() => fnc(0)}>

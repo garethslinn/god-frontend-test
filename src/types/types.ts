@@ -5,3 +5,9 @@ export type ItemProps = {
     modelType: string;
     imageUrl: string;
 };
+
+export type NavigationProps = {
+    fnc: (number: number) => void;
+    forward: boolean;
+    backward: boolean;
+};
