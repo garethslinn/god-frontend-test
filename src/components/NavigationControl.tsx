@@ -1,5 +1,4 @@
 import React, { ReactElement } from 'react';
-import { ItemProps } from '../types/types';
 
 // @ts-ignore
 import { Block } from 'vcc-ui';
