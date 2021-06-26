@@ -1,0 +1,17 @@
+.tracking {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.tracker {
+  background: $ornament-divider;
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  margin: 0 3px 0 3px;
+  &.active {
+    background: $primary-foreground;
+  }
+}

@@ -1,10 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 // @ts-ignore
-import { Block, Button, View, SelectInput } from 'vcc-ui';
+import { Block, Button, View, SelectInput, Flex } from 'vcc-ui';
 import ProductPanel from "../components/ProductPanel";
 import { ItemProps } from '../types/types';
 import NavigationControl from "./NavigationControl";
 import { CONSTANT } from "../constants/constants";
+
+export type TrackingProps = {
+    active: boolean;
+}
 
 export default function ProductPanelCarousel() {
     const [carData, setCarData] = useState<ItemProps[]>([]);
@@ -17,6 +21,7 @@ export default function ProductPanelCarousel() {
     let [counter, setCounter] = useState(0);
     const [totalGroups, setTotalGroups] = useState(0);
     const [filterValue, setFilterValue] = useState('');
+    const [totalItems, setTotalItems] = useState();
 
     const movePanel = (direction: number) => { // direction value determines panel direction
         direction === 0 ? setCounter(counter--) : setCounter(counter++) ;
@@ -63,6 +68,9 @@ export default function ProductPanelCarousel() {
             .then(data => {
                 setCarData(data);
                 setSavedData(data);
+                let arr = Array.from({length:data.length},()=> ({'active':false}))
+                arr[0].active = true;
+                setTotalItems(arr);
             })
     }, []);
 
@@ -123,6 +131,18 @@ export default function ProductPanelCarousel() {
                 </div>
             </Block>
             {!isFilter && <NavigationControl fnc={movePanel} forward={!isForward} backward={!isBackward} />}
+
+            <div className="tracking">
+                {totalItems &&
+                    totalItems.map((item:TrackingProps) => {
+                        return (<>
+                            <div className={item.active ? 'tracker active' : 'tracker'}>
+
+                            </div>
+                        </>)
+                    })
+                }
+            </div>
         </div>
       </Block>
   );
