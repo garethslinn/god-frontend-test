@@ -1,9 +1,9 @@
 # Volvo Cars (Global Online Digital) 
-## test completed test
+## Completed Test
 
 
 ### Notes
-This isn't a completed task as not all the functionality is present. For example, the carousel
+I have covered most of the requirements for this test but its not 100% complete. For example, the carousel
 doesn't automate for mobile however I did allow scrolling and styled up the item tracker. 
 My aim was to do as much as possible within three hours, I ended up spending a little longer than
 that but happy that I did.
