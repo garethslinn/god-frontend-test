@@ -103,7 +103,7 @@ export default function ProductPanelCarousel() {
                 <option value="estate">ESTATE</option>
                 <option value="sedan">SEDAN</option>
             </SelectInput>
-            <button onClick={() => resetCars ()}>Reset</button>
+            <Button intent="secondary" onClick={() => resetCars ()}>Reset</Button>
             <Block>
                 <div style={positionStyle()} className="productPanelContainer">
                   {carData &&
