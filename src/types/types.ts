@@ -11,3 +11,7 @@ export type NavigationProps = {
     forward: boolean;
     backward: boolean;
 };
+
+export type TrackingProps = {
+    active: boolean;
+}

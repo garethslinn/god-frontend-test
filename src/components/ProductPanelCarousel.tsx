@@ -2,13 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 // @ts-ignore
 import { Block, Button, View, SelectInput, Flex } from 'vcc-ui';
 import ProductPanel from "../components/ProductPanel";
-import { ItemProps } from '../types/types';
+import { ItemProps, TrackingProps } from '../types/types';
 import NavigationControl from "./NavigationControl";
 import { CONSTANT } from "../constants/constants";
-
-export type TrackingProps = {
-    active: boolean;
-}
 
 export default function ProductPanelCarousel() {
     const [carData, setCarData] = useState<ItemProps[]>([]);
@@ -131,19 +127,14 @@ export default function ProductPanelCarousel() {
                 </div>
             </Block>
             {!isFilter && <NavigationControl fnc={movePanel} forward={!isForward} backward={!isBackward} />}
-
-            <div className="tracking">
-                {totalItems &&
-                    totalItems.map((item:TrackingProps) => {
-                        return (<>
-                            <div className={item.active ? 'tracker active' : 'tracker'}>
-
-                            </div>
-                        </>)
-                    })
-                }
-            </div>
         </div>
+          <div className="tracking">
+              {totalItems &&
+              totalItems.map((item:TrackingProps) => {
+                  return (<div className={item.active ? 'tracker active' : 'tracker'} />)
+              })
+              }
+          </div>
       </Block>
   );
 }

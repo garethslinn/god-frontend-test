@@ -1,41 +1,30 @@
 # Volvo Cars (Global Online Digital) 
-## Front-end coding test (React)
+## test completed test
 
-Our team's designer has come up with a new design to show our latest and greatest recharge cars on the website.
 
-Here is how the design look like for desktop and mobile (files are stored under `docs` folder)
+### Notes
+This isn't a completed task as not all the functionality is present. For example, the carousel
+doesn't automate for mobile however I did allow scrolling and styled up the item tracker. 
+My aim was to do as much as possible within three hours, I ended up spending a little longer than
+that but happy that I did.
 
-### Desktop
-![ProductListDesktop](./docs/ProductList-Desktop.png)
+I wasn't certain on how the desktop version should scale so to be on the safe side I added a
+maximum width constraint of 1024.  Likewise, I tried to maintain the look and feel as the browser 
+width reduced.  I then applied new style rules at the mobile breakpoint.  My concern is if this 
+ideally needed to scale larger than 1024 then I would have considered using rems or ems. 
 
-### Mobile
-![ProductListDesktop](./docs/ProductList-Mobile.png)
+I tested the product carousel, and it works but has some edge cases that given more time I would
+have developed this more robustly. 
 
-The data required to render the design is under `public/api/cars.json` folder. You need to fetch the data from the client side and render it in the browser. The data looks like this: 
+My aim was to tick as many boxes as possible and used your component library which I found
+to be impressive.  
 
-```json
-[
-    {
-      "id": "xc90-recharge",
-      "modelName": "XC90 Recharge", 
-      "bodyType": "suv",
-      "modelType": "plug-in hybrid",
-      "imageUrl": "/images/xc90_recharge.jpg"
-    }
-]
-```
+I appreciate the time and effort gone into setting up this test and enjoyed the challenge. 
 
-The product owner is telling you that you can generate the links to the learn and shop pages of each car by concatating the `id` of the car to the learn (`/learn/`) and shop (`/shop/`) urls.
 
-Two extra SVG icons are also provided by our designer which are stored under `docs` folder.
+### Install
+yarn or npm install
 
-## Requirements
-- The project is bootstraped using create-react-app.
-- Browser support is modern ever-green browsers.
-- Implement this design using React and Typescript.
-- Accessibility is important.
-- Code Structure and reusablity is important.
 
-## Bonus Points:
-- If you use our design system component library, [VCC-UI](https://vcc-ui.netlify.app)
-- If you add a filter bar on the top to filter cars by `bodyType`
+### Start
+yarn start or npm run start
