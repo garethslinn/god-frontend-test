@@ -1,20 +1,16 @@
 import React from 'react';
 // @ts-ignore
 import { Block, Button, View} from 'vcc-ui';
-import ProductPanelContainer from "./components/ProductPanelContainer";
+import ProductPanelCarousel from "./components/ProductPanelCarousel";
 
 export default function App() {
   return (
-      <Block extend={{ padding: 20 }}>
+      <Block extend={{ background: 'white' }}>
           <View spacing={2}>
               <View
                   padding={[1, 2]}
-                  extend={{
-                      border: '1px solid grey',
-                      padding: 20,
-                  }}
               >
-                <ProductPanelContainer />
+                <ProductPanelCarousel />
               </View>
           </View>
       </Block>

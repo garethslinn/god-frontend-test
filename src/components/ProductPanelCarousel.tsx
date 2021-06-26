@@ -6,11 +6,10 @@ import { ItemProps } from '../types/types';
 import NavigationControl from "./NavigationControl";
 import { CONSTANT } from "../constants/constants";
 
-export default function ProductPanelContainer() {
+export default function ProductPanelCarousel() {
     const [carData, setCarData] = useState<ItemProps[]>([]);
     const [containerWidth, setContainerWidth] = useState();
     const [navigation, setNavigation] = useState();
-
     const [isForward, setIsForward] = useState(false);
     const [isBackward, setIsBackward] = useState(false);
     let [counter, setCounter] = useState(0);
@@ -26,6 +25,8 @@ export default function ProductPanelContainer() {
     }
 
     const checkNavigation = () => { // checks if navigation should be disabled = needs refactoring
+
+
         if (counter <= 0) {
             setIsBackward(false)
         } else {
@@ -83,19 +84,18 @@ export default function ProductPanelContainer() {
         <div ref={ref} className="productPanelWrapper">
             <Block>
                 <div style={positionStyle()} className="productPanelContainer">
-                    {totalGroups}
                   {carData &&
-                  carData.map((item:ItemProps) => {
-                      return (<>
-                          <ProductPanel
-                              id={item.id}
-                              bodyType={item.bodyType}
-                              modelName={item.modelName}
-                              modelType={item.modelType}
-                              imageUrl={item.imageUrl}
-                          />
-                      </>)
-                  })
+                      carData.map((item:ItemProps) => {
+                          return (<>
+                              <ProductPanel
+                                  id={item.id}
+                                  bodyType={item.bodyType}
+                                  modelName={item.modelName}
+                                  modelType={item.modelType}
+                                  imageUrl={item.imageUrl}
+                              />
+                          </>)
+                      })
                   }
                 </div>
             </Block>

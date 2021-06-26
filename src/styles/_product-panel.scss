@@ -3,6 +3,10 @@
   overflow: hidden;
   position: relative;
   padding-bottom: 40px;
+
+  @media screen and (max-width: $media-m) {
+    overflow: scroll;
+  }
 }
 
 .productPanelContainer {
