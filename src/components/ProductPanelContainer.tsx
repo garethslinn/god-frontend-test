@@ -67,7 +67,7 @@ export default function ProductPanelContainer() {
                   }
                 </div>
             </Block>
-            <NavigationControl fnc={movePanel} />
+            <NavigationControl fnc={movePanel} forward={false} backward={true} />
         </div>
       </Block>
   );
